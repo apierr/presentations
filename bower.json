@@ -1,0 +1,9 @@
+{
+  "name": "assegno-ricerca-bando-6982",
+  "description": "Presentazione per assegno-ricerca-bando-6982",
+  "version": "1.0.0",
+
+  "dependencies": {
+    "reveal.js": "latest"
+  }
+}
