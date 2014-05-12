@@ -18,3 +18,13 @@ table.table-skills {
 ul.list-works {
 	font-size: 18pt;
 }
+
+img.img-monitoring {
+	height: 75%;
+	width: 75%;
+}
+
+img.img-condition-data {
+	height: 77%;
+	width: 80%;
+}
