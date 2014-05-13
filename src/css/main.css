@@ -1,5 +1,9 @@
 div.accounting-operation  {
-	font-size: 18pt;
+	font-size: 24pt;
+}
+
+.reveal h1, .reveal h2 {
+	text-transform: none;
 }
 
 img.accounting-operation  {
@@ -8,7 +12,7 @@ img.accounting-operation  {
 }
 
 table.table-qualifications {
-	font-size: 15pt;
+	font-size: 14pt;
 }
 
 table.table-skills {
@@ -16,7 +20,7 @@ table.table-skills {
 }
 
 ul.list-works {
-	font-size: 18pt;
+	font-size: 24pt;
 }
 
 img.img-monitoring {
@@ -27,4 +31,14 @@ img.img-monitoring {
 img.img-condition-data {
 	height: 77%;
 	width: 80%;
+}
+
+section ul.hyphen-list {
+	list-style-type: none;
+	margin-left: 1.5em;
+	padding-left: 1em;
+	text-indent: -0.85em;
+}
+section ul.hyphen-list li:before {
+	content: "- ";
 }
