@@ -38,3 +38,7 @@ section ul.hyphen-list {
 section ul.hyphen-list li:before {
 	content: "- ";
 }
+
+.slides section img {
+	border: none;
+}
