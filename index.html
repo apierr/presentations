@@ -51,6 +51,9 @@
 					<p>
 						<small>Created by <a href="http://antonio-pierro.github.io">Antonio Pierro</a> / <a href="http://twitter.com/antonio_pierro_">@antonio_pierro_</a></small>
 					</p>
+					<aside class="notes">
+						In questa presentazione vi parlerò di alcune attività che ho svolto nel campo della Fisica delle Alte Energie, in particolare nel campo delle griglie computazionali.
+					</aside>
 				</section>
 
 				<section>
@@ -103,6 +106,14 @@
 						      </tbody>
 						    </table>
 					</p>
+					<aside class="notes">
+						Innanzitutto vi vorrei parlare brevente del mio percorso accademico.<br>
+						La seguente tabella è un elenco dei miei titoli accademici a partire dal più recente.<br>
+						Attualmente sono professore a contratto presso l’Universià di Cagliari per gli insegnamenti di Fisica I e Informatica.<br>
+						Ho lavorato per quattro anni al CERN per l’esperimento CMS, grazie ad una borsa di post-dottorato (o post-doc).<br>
+						Nel 2011 ho conseguito il dottorato di ricerca in Fisica.<br>
+						Dopo aver conseguito la laurea in Fisica presso l'Università di Bari, ho lavorato per quattro anni nell'ambito del calcolo distribuito grazie ad una borsa INFN e ad una borsa EGEE.
+					</aside>
 				</section>
 
 				<section>
@@ -135,6 +146,9 @@
 							  </div>
 							</div>
 						</p>
+						<aside class="notes">
+							In questa slide ci sono alcuni esempi di reports che era possibile ottenere.
+						</aside>
 					</section>
 				</section>
 
@@ -148,6 +162,18 @@
 								<li><b>Solution</b>: tool for automatic upload in Oracle Database (traceability, security copy, online network polls GPN)</li>
 							</ul>
 						</p>
+						<aside class="notes">
+							Ora vi descriverò molto brevemente due attività condotte al CERN durante la preparazione della mia tesi di dottorato e la borsa di post-dottorato presso il CERN.<br> 
+							La prima riguarda la manipolazione e stoccaggio dei dati di condizione.<br>
+							L'obiettivo di questo lavoro è stato quello di gestire i dati di condizioni provenienti dalla calibrazione offline.
+							La difficoltà del lavoro consiste nel garantire:
+							<ol>
+								<li>la sicurezza informatica della rete online da possibili intrusioni esterne</li>
+								<li>garantire la qualità dei dati di condizioni che provenivano dalla rete offline.</li>
+							</ol>
+							La soluzione adottata è stata l'implementazione di un sistema in grado di eseguire delle richieste di tipo pull su delle macchine offline in cui venivano stoccati i dati di condizione provenienti dalla rete grid.<br>
+							Il sistema era anche in grado associare la riferibilità di questi dati.
+						</aside>
 					</section>
 
 					<section>
@@ -156,30 +182,44 @@
 							<!-- TOTO improve the readability of the picture handling-cms-condition-data.png -->
 							<img src="src/images/handling-cms-condition-data.png" class="img-condition-data">
 						</p>
+						<aside class="notes">
+							In questa immagine potete osservare la posizione dei vari sistemi rispetto al rivelatore di particelle CMS.
+						</aside>
 					</section>
 				</section>
 
 				<section>
 					<section>
-					<h2>Monitoring of CMS condition data 1/2</h2>
-					<p>
-						<ul>
-							<li><b>Goal</b>:
-								<ul class="list-group hyphen-list">
-									<li>Monitoring the population of the CMS condition database accounts in real-time</li>
-									<li>Spotting problematic dataset that could block the express data processing</li>
-								</ul>
-							</li>
-							<li><b>Challenge</b>:
-								<ul class="hyphen-list">
-									<li>Integration in CMSSW standards</li>
-									<li>Usable Interface</li>
-									<li>Ease of implementation and maintenance</li>
-								</ul>
-							</li>
-							<li><b>Solution</b>: web-based monitoring tool using the latest web technologies (persistent local storage, Web-Socket, Web-Workers) and the 3-tier architecture</li>
-						</ul>
-					</p>
+						<h2>Monitoring of CMS condition data 1/2</h2>
+						<p>
+							<ul>
+								<li><b>Goal</b>:
+									<ul class="list-group hyphen-list">
+										<li>Monitoring the population of the CMS condition database accounts in real-time</li>
+										<li>Spotting problematic dataset that could block the express data processing</li>
+									</ul>
+								</li>
+								<li><b>Challenge</b>:
+									<ul class="hyphen-list">
+										<li>Integration in CMSSW standards</li>
+										<li>Usable Interface</li>
+										<li>Ease of implementation and maintenance</li>
+									</ul>
+								</li>
+								<li><b>Solution</b>: web-based monitoring tool using the latest web technologies (persistent local storage, Web-Socket, Web-Workers) and the 3-tier architecture</li>
+							</ul>
+						</p>
+						<aside class="notes">
+							Concludo la mia presentazione sulle principali attività di ricerca parlandovi del mio contributo sul monitariggio dei dati di condizione e dei loro servizi per l'esperimento CMS.<br>
+							L'obiettivo di questo lavoro era quello di fornire dati in tempo reali sullo stato dei dati di condizioni e i servizi che rendevano accessibili questo tipo di risorse.
+							Le difficoltà del progetto risiedevano nei seguenti punti:
+							<ol>
+								<li>la grandezza dell'esperimento costituito da diversi sottodetecotori</li>
+								<li>dare dei risultati in tempo reale: era fodamentale rilevare i set di dati problematici nel minor tempo possibile in modo da non bloccare la ricostruzione ed analisi dei dati fisici grezzi prodotti dal rivelatore.</li>
+							</ol>
+							La soluzione proposta è stata la progettazione di uno strumento su una struttura multi-livello o multi-strato, sperimentando le tecnologie web più innovative.
+							Questo sistema centrale di monitoraggio ha facilitato la ricerca sistematica delle cause di fallimento del trasferimento di tali dati.
+						</aside>
 					</section>
 					<section>
 						<h2>Monitoring of CMS condition data 2/2</h2>
@@ -187,6 +227,9 @@
 							<!-- TOTO improve the readability of the picture monitoring-CMS-condition-data.png -->
 							<img src="src/images/monitoring-CMS-condition-data.png" class="img-monitoring">
 						</p>
+						<aside class="notes">
+							In questa slide potete vedere l'architettura implementata per il monitoraggio del trasferimento dei dati di condizione.
+						</aside>
 					</section>
 				</section>
 
@@ -201,6 +244,16 @@
 							<li>I supervised several master students from Vilnius University, Department of Computer Science. We published 8 papers, 5 of which are collected in the Proceedings of International Conferences (CHEP11, RT10, ICCMSE09, DMS09)</li>
 						</ul>
 					</p>
+					<aside class="notes">
+						Infine, concludo la mia presentazione elencandovi altri punti che hanno contribuito alla mia formazione professionale.
+						<ol>
+							<li>Nella mia carriera accademica ho diverse pubblicazioni come primo nome soprattutto nell’ambito del calcolo distribuito tipo Grid.</li>
+							<li>Ho frequentato diversi corsi di formazioni in cui ho appreso le mie conoscenze in campo informatico. C++, python, Oracle.</li>
+							<li>Sono stato docente alla scuola di biomed grid. Ho insegnato a diversi ricercatori provenienti da campi diversi dalla fisica ad uitlizzare le risorse GRID.</li>
+							<li>Per due anni sono stato ingengere R&D per una star-up chiamata 360Learing per lo sviluppo di una applicazione web-based sviluppata con le tecnoligie web più innovative</li>
+							<li>Infine, durante la mia esperienza al CERN ho fatto da super-visore a diversi studenti dell’università di Vilnus.</li>
+						</ol>
+					</aside>
 				</section>
 			</div>
 		</div>
