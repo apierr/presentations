@@ -1,0 +1,172 @@
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Indoor navigation - Antonio Pierro</title>
+
+		<meta name="description" content="Career history - Career history">
+		<meta name="author" content="Antonio Pierro">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="vendors/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="vendors/reveal.js/css/theme/sky.css" id="theme">
+		<!-- Bootstrap core CSS -->
+		<!-- TODO get it from the local vendors-->
+		<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="vendors/reveal.js/lib/css/zenburn.css">
+		<link rel="stylesheet" href="src/css/main.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="vendors/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>3D Model Indoor Navigation</h1>
+					<h3>Antonio Pierro</h3>
+					<p>
+						<small>Created by <a href="http://antonio-pierro.github.io">Antonio Pierro</a> / <a href="http://twitter.com/antonio_pierro_">@antonio_pierro_</a></small>
+					</p>
+					<aside class="notes">
+						In questa presentazione vi parlerò d.
+						<hr>
+						In this presentation I will talk about my research activities in the field of high energy physics, in particular in the field of the grid computing.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Motivation</h2>
+					<p>
+						<ul>
+							<li>It is extremely important for students and external people to find their destination such as laboratories in a large complex buildings, such as a university.</li>
+							<li>A successful implementation of the proposed system would provide visitors of university with their current locations inside the building and the shortest route when searching for a laboratory of interest.</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>State of the art and limits</h2>
+					<ul>
+						<li>Google Maps for Android began introducing floor plans of shopping malls, airports, and other large commercial areas.</li>
+						<li>It knows where the WiFi hotspots are in a given building, and through signal strength triangulation it can roughly define where you are.</li>
+						<li>Limits:
+							<ul>
+								<li>it provides just 2D navigation</li>
+								<li>in spaces where there are different materials the signal is too noisy.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Challenges</h2>
+						<p>
+							<ul>
+								<li>The navigation in the building is complicated by:
+									<ul>
+										<li>absence of GPS</li>
+										<li>the existence of multiple floors and walls.</li>
+									</ul>
+								</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>Solution</h2>
+						<p>
+							<ul>
+								<li>Modern smart-phones have several sensors which are pertinent to the localization problem.</li>
+								<li>Such sensors can be:
+									<ul>
+										<li><strike>Wifi</strike></li>
+										<li><strike>Bluetooth</strike></li>
+										<li>accelerometer</li>
+										<li>magnetometer</li>
+										<li>gyroscope sensors</li>
+									</ul>
+								</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Technology adoption</h2>
+					<ul>
+						<li>PhoneGap to create a user interface using the web technologies.</li>
+						<li>Accelerometer sensor to captures device motion in the x, y, and z direction.</li>
+						<li>Supported platforms: Android, BlackBerry, iPhone.</li>
+						<li>Supported devices: all devices having the "Accelerometer and gyroscope" sensor.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>References</h2>
+					<ul>
+						<li><a href="https://www.google.com/maps/about/partners/indoormaps/">Indoor Maps by Google</a></li>
+						<li><a href="https://github.com/innova-re/ips">Innovare IPS</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="vendors/reveal.js/lib/js/head.min.js"></script>
+		<script src="vendors/reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'vendors/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'vendors/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'vendors/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'vendors/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'vendors/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'vendors/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
