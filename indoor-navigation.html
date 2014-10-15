@@ -52,35 +52,65 @@
 						<small>Created by <a href="http://antonio-pierro.github.io">Antonio Pierro</a> / <a href="http://twitter.com/antonio_pierro_">@antonio_pierro_</a></small>
 					</p>
 					<aside class="notes">
-						In questa presentazione vi parlerò d.
+						In questa presentazione vi parlerò di....
 						<hr>
-						In this presentation I will talk about my research activities in the field of high energy physics, in particular in the field of the grid computing.
+						In this presentation I will talk about my research activities in the field of....
 					</aside>
 				</section>
 
 				<section>
-					<h2>Motivation</h2>
-					<p>
-						<ul>
-							<li>It is extremely important for students and external people to find their destination such as laboratories in a large complex buildings, such as a university.</li>
-							<li>A successful implementation of the proposed system would provide visitors of university with their current locations inside the building and the shortest route when searching for a laboratory of interest.</li>
-						</ul>
-					</p>
+
+					<section>
+						<h2>Motivation</h2>
+						<p>
+							<ul>
+								<li>It is extremely important for students and external people to find their destination such as laboratories in a large complex buildings, such as a university.</li>
+								<li>A successful implementation of the proposed system would provide visitors of university with their current locations inside the building and the shortest route when searching for a laboratory of interest.</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h2>3D model indoor example</h2>
+						<p>
+							<img src="src/images/indoor-navigation-3d.png">
+						</p>
+					</section>
+
 				</section>
 
 				<section>
-					<h2>State of the art and limits</h2>
-					<ul>
-						<li>Google Maps for Android began introducing floor plans of shopping malls, airports, and other large commercial areas.</li>
-						<li>It knows where the WiFi hotspots are in a given building, and through signal strength triangulation it can roughly define where you are.</li>
-						<li>Limits:
-							<ul>
-								<li>it provides just 2D navigation</li>
-								<li>in spaces where there are different materials the signal is too noisy.</li>
-							</ul>
-						</li>
-					</ul>
+					<section>
+						<h2>State of the art and limits</h2>
+						<ul>
+							<li>Google Maps for Android began introducing floor plans of shopping malls, airports, and other large commercial areas.</li>
+							<li>It knows where the WiFi hotspots are in a given building, and through signal strength triangulation it can roughly define where you are.</li>
+							<li>Limits:
+								<ul>
+									<li>it provides just 2D navigation;</li>
+									<li>in spaces where there are different materials the signal is too noisy;</li>
+									<li>it is good just to tell you that you are in that particular building if you are inside.</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Signal strength triangulation</h2>
+						<p>
+							<div class="media">
+								<a class="pull-right">
+									<img class="media-object" src="./src/images/signal-strength-triangulation.jpg">
+								</a>
+								<div class="media-body">
+									<ul>
+										<li>The localization technique used for positioning with wireless access points is based on measuring the intensity of the received signal (received signal strength in English RSS) and the method of "fingerprinting"<a href="#/5">[1]</a>.</li>
+									</ul>
+								</div>
+							</div>
+						</p>
+					</section>
 				</section>
+
 
 				<section>
 					<section>
@@ -99,18 +129,25 @@
 					<section>
 						<h2>Solution</h2>
 						<p>
-							<ul>
-								<li>Modern smart-phones have several sensors which are pertinent to the localization problem.</li>
-								<li>Such sensors can be:
+							<div class="media">
+								<a class="pull-right">
+									<img class="media-object" src="./src/images/indoor-navigation-accelerometer.png">
+								</a>
+								<div class="media-body">
 									<ul>
-										<li><strike>Wifi</strike></li>
-										<li><strike>Bluetooth</strike></li>
-										<li>accelerometer</li>
-										<li>magnetometer</li>
-										<li>gyroscope sensors</li>
+										<li>Modern smart-phones have several sensors which are pertinent to the localization problem.</li>
+										<li>Such sensors can be:
+											<ul>
+												<li><strike>Wifi</strike></li>
+												<li><strike>Bluetooth</strike></li>
+												<li>accelerometer</li>
+												<li>magnetometer</li>
+												<li>gyroscope sensors</li>
+											</ul>
+										</li>
 									</ul>
-								</li>
-							</ul>
+								</div>
+							</div>
 						</p>
 					</section>
 				</section>
@@ -127,10 +164,11 @@
 
 				<section>
 					<h2>References</h2>
-					<ul>
+					<ol>
+						<li><a id="cite1" href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=996891&tag=1">Signal Strength Based Indoor Geolocation</a></li>
 						<li><a href="https://www.google.com/maps/about/partners/indoormaps/">Indoor Maps by Google</a></li>
 						<li><a href="https://github.com/innova-re/ips">Innovare IPS</a></li>
-					</ul>
+					</ol>
 				</section>
 			</div>
 		</div>
