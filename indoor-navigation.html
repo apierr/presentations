@@ -52,42 +52,83 @@
 						<small>Created by <a href="http://antonio-pierro.github.io">Antonio Pierro</a> / <a href="http://twitter.com/antonio_pierro_">@antonio_pierro_</a></small>
 					</p>
 					<aside class="notes">
-						In questa presentazione vi parlerò d.
+						Ho preparato la presentazione in inglese perchè essendo l'argomento abbastanza innovativo potrebbe essere necessaria la collaborazione con gruppi di ricerca dall'estero.
 						<hr>
-						In this presentation I will talk about my research activities in the field of high energy physics, in particular in the field of the grid computing.
+						In this presentation I will talk about my research activities in the field of....
 					</aside>
 				</section>
 
 				<section>
-					<h2>Motivation</h2>
-					<p>
-						<ul>
-							<li>It is extremely important for students and external people to find their destination such as laboratories in a large complex buildings, such as a university.</li>
-							<li>A successful implementation of the proposed system would provide visitors of university with their current locations inside the building and the shortest route when searching for a laboratory of interest.</li>
-						</ul>
-					</p>
+
+					<section>
+						<h2>Introduction</h2>
+						<p>
+							<ul>
+								<li>It is extremely important for students and external people to find their destination in large and complex set of buildings, such as a university.</li>
+								<li>A successful implementation of the proposed system would provide visitors at university with their current location inside the building where they are and the shortest route when searching for a room or laboratory of interest.</li>
+							</ul>
+						</p>
+						<aside class="notes">
+							Un applicatione che permetta di avere sistema di "posizionamento per gli ambienti coperti" sarebbe molto utile in edifici grandi e complessi come quelle dell'università per raggiungere aule o laboratori. Sopratutto per persone esterne.
+						</aside>
+					</section>
+
+					<section>
+						<h2>3D model indoor example</h2>
+						<p>
+							<img src="src/images/indoor-navigation-3d.png">
+						</p>
+					</section>
+
 				</section>
 
 				<section>
-					<h2>State of the art and limits</h2>
-					<ul>
-						<li>Google Maps for Android began introducing floor plans of shopping malls, airports, and other large commercial areas.</li>
-						<li>It knows where the WiFi hotspots are in a given building, and through signal strength triangulation it can roughly define where you are.</li>
-						<li>Limits:
-							<ul>
-								<li>it provides just 2D navigation</li>
-								<li>in spaces where there are different materials the signal is too noisy.</li>
-							</ul>
-						</li>
-					</ul>
+					<section>
+						<h2>State of the art and limits</h2>
+						<ul>
+							<li>Google Maps for Android began introducing floor plans of shopping malls, airports, and other large commercial areas.</li>
+							<li>It knows where the WiFi hotspots are in a given building, and through the signal strength triangulation it can roughly define where you are.</li>
+							<li>Limits:
+								<ul>
+									<li>it provides just 2D navigation;</li>
+									<li>in spaces where there are different materials, the signal is too noisy;</li>
+									<li>it proves to be good just to tell you whether you are in that particular building when you already are inside without any further detail.</li>
+								</ul>
+							</li>
+						</ul>
+						<aside class="notes">
+							Google Maps ha sviluppato un'applicazione solo per Android che permette la navigazione e il posizionamento dentro ambienti comperti.
+							L'applicazione funziona per alcuni grandi aeroporti e centri commerciali soprattutto negli stati uniti.
+							L'applicazione, sopratutto per altri ambienti diversi dall'areoporto ha dei limiti a causa di ostacoli come muri che in genere sono presenti in edifici diversi da quelli dell'aeroporto.
+						</aside>
+					</section>
+					<section>
+						<h2>Signal strength triangulation</h2>
+						<p>
+							<div class="media">
+								<a class="pull-right">
+									<img class="media-object" src="./src/images/signal-strength-triangulation.jpg">
+								</a>
+								<div class="media-body">
+									<ul>
+										<li>The localization technique used for positioning with wireless access points is based on measuring the intensity of the received signal (received signal strength in English RSS) and the method of "fingerprinting"<a href="#/5">[1]</a>.</li>
+									</ul>
+								</div>
+							</div>
+						</p>
+						<aside class="notes">
+							L'applicazione di google sfrutta il metodo della tringolazione del segnale. La distanza dal disposito wireless può essere calcolato grazie alla potenza del segnale.
+						</aside>
+					</section>
 				</section>
+
 
 				<section>
 					<section>
 						<h2>Challenges</h2>
 						<p>
 							<ul>
-								<li>The navigation in the building is complicated by:
+								<li>Navigation in the building is complicated because of:
 									<ul>
 										<li>absence of GPS</li>
 										<li>the existence of multiple floors and walls.</li>
@@ -97,40 +138,55 @@
 						</p>
 					</section>
 					<section>
-						<h2>Solution</h2>
+						<h2>A possible solution</h2>
 						<p>
-							<ul>
-								<li>Modern smart-phones have several sensors which are pertinent to the localization problem.</li>
-								<li>Such sensors can be:
+							<div class="media">
+								<a class="pull-right">
+									<img class="media-object" src="./src/images/indoor-navigation-accelerometer.png">
+								</a>
+								<div class="media-body">
 									<ul>
-										<li><strike>Wifi</strike></li>
-										<li><strike>Bluetooth</strike></li>
-										<li>accelerometer</li>
-										<li>magnetometer</li>
-										<li>gyroscope sensors</li>
+										<li>Modern smart-phones have several sensors which are relevant to the localization problem.</li>
+										<li>Such sensors can be:
+											<ul>
+												<li><del>Wifi</del></li>
+												<li><del>Bluetooth</del></li>
+												<li>accelerometer</li>
+												<li>magnetometer</li>
+												<li>gyroscope sensors</li>
+											</ul>
+										</li>
 									</ul>
-								</li>
-							</ul>
+								</div>
+							</div>
 						</p>
+						<aside class="notes">
+							L'idea innovativa potrebbe essere quella sfruttare altri sensori ormai molto comuni negli smartphone come gli accelerometri e i giroscopi, sistemi che servono per far capire alle applicazioni l’orientamento e la posizione del telefono.
+							Grazie a questi dispositivi si potrebbe  stabilire la propria posizione in un luogo chiuso anche senza usare WiFi o altri segnali.
+							La mia idea è che basterebbe rilevare il punto di ingresso nell'edificio attraverso il GPS e poi contare i passi con l'accelerometro, la direzione presa con la bussola e con il giroscopio.
+							Essendo del tutto autonomo e indipendente dalle reti WiFi, il sistema avrebbe anche il vantaggio di dare maggiori garanzie sulla privacy agli utenti.
+							Gli smartphone ricostruirebbero la loro posizione all’interno degli edifici senza trasmettere alcuna informazione verso l’esterno, salvo nel caso di particolari servizi.
+						</aside>
 					</section>
 				</section>
 
 				<section>
-					<h2>Technology adoption</h2>
+					<h2>A proposal for technologies</h2>
 					<ul>
-						<li>PhoneGap to create a user interface using the web technologies.</li>
-						<li>Accelerometer sensor to captures device motion in the x, y, and z direction.</li>
+						<li>PhoneGap, to create a user interface by using web technologies.</li>
+						<li>Accelerometer sensor, to capture device motion in the x, y, and z directions.</li>
 						<li>Supported platforms: Android, BlackBerry, iPhone.</li>
-						<li>Supported devices: all devices having the "Accelerometer and gyroscope" sensor.</li>
+						<li>Supported devices: all devices having the "Accelerometer and gyroscope" sensors.</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>References</h2>
-					<ul>
+					<ol>
+						<li><a id="cite1" href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=996891&tag=1">Signal Strength Based Indoor Geolocation</a></li>
 						<li><a href="https://www.google.com/maps/about/partners/indoormaps/">Indoor Maps by Google</a></li>
 						<li><a href="https://github.com/innova-re/ips">Innovare IPS</a></li>
-					</ul>
+					</ol>
 				</section>
 			</div>
 		</div>
